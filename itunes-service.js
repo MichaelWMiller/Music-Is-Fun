@@ -18,13 +18,12 @@ function ItunesService() {
                         artist: song.artistName,
                         collection: song.collectionName,
                         price: song.collectionPrice,
-                        preview: song.previewUrl,
-                        type: song.type
+                        preview: song.previewUrl
                     };
                 })
                 //changes button back to GET MUSIC once songs are loaded
             $('#get-music-button').text('GET MUSIC');
-            console.log(songList)
+
             return songList;
         })
     }

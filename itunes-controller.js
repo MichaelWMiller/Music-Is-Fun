@@ -9,21 +9,25 @@ function ItunesController() {
 
     //Start coding here
     function drawSongs(results) {
-
+        var template = `Empty`
+        var rowsElem = document.getElementById("flxRow")
         if (results.length == 0) {
             document.getElementById("placeHolder").innerHTML = "Please Enter Search Criteria"
+            template = ``
+            rowsElem.innerHTML = template
             return
         }
         var searchInput = ""
 
-        var template = ``
+
         var arr = []
         var len = results.length
-        var rowsElem = document.getElementById("flxRow")
-        if (!document.getElementById("searchKey").textContent == "...") {
+        rowsElem = document.getElementById("flxRow")
+        if (!document.getElementById('searchKey') === null ||
+            document.getElementById('searchKey') === undefined) {
             searchInput = document.getElementById("searchKey").innerHTML
         } else {
-            return
+            //  return
         }
 
 
