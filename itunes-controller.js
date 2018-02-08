@@ -14,14 +14,14 @@ function ItunesController() {
             document.getElementById("placeHolder").innerHTML = "Please Enter Search Criteria"
             return
         }
-        var searchKey = ""
+        var searchInput = ""
 
         var template = ``
         var arr = []
         var len = results.length
         var rowsElem = document.getElementById("flxRow")
-        if (!document.getElementById("searchKey").innerHTML) {
-            searchKey = document.getElementById("searchKey").innerHTML
+        if (!document.getElementById("searchKey").textContent == "...") {
+            searchInput = document.getElementById("searchKey").innerHTML
         } else {
             return
         }
@@ -56,7 +56,7 @@ function ItunesController() {
         }
 
 
-        searchKey.innerHTML = arr[0]["artist"]
+        searchInput.innerHTML = arr[0]["artist"]
         rowsElem.innerHTML = template
     }
 
